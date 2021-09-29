@@ -6,46 +6,52 @@
     switch($medida){
         case 1:
             $novo_valor = $valor;
-            if ($unidade_atual == 1 && $unidade_desejada == 2 ){ // Quilomentro para metro
+            if ($unidade_atual == 1 && $unidade_desejada == 2 ){ // Quilômetro para metro
                 $resultado = $novo_valor * 1000;
-                $res = 'O Quilômetro foi convetido para metro e o valor é: ' . $resultado;
-            } else if ($unidade_atual == 1 && $unidade_desejada == 3){ // Quilometro para centimetro
+                $res = 'O valor em metro equivalente ao valor em quilômetro de '.$valor.' é : ' . $resultado;
+            } else if ($unidade_atual == 1 && $unidade_desejada == 3){ // Quilômetro para centimetro
                 $resultado = $novo_valor * 100000;
-                $res = 'O Quilômetro foi convetido para centimetro e o valor é: ' . $resultado;
-            } else if ($unidade_atual == 2 && $unidade_desejada == 1){ // Metro para Quilometro
+                $res = 'O valor em centímetro equivalente ao valor em quilômetro de '.$valor.' é : ' . $resultado;
+            } else if ($unidade_atual == 2 && $unidade_desejada == 1){ // Metro para Quilômetro
                 $resultado = $novo_valor / 1000;
-                $res = 'O Metro foi convetido para quilômetro e o valor é: ' . $resultado;
-            } else if ($unidade_atual == 2 && $unidade_desejada == 3){
+                $res = 'O valor em quilômetro equivalente ao valor em metro de '.$valor.' é : ' . $resultado;
+            } else if ($unidade_atual == 2 && $unidade_desejada == 3){ // Metro para Centímetro
                 $resultado = $novo_valor * 100;
-                $res = 'O Metro foi convetido para centímetro e o valor é: ' . $resultado;
-            } else if ($unidade_atual == 3 && $unidade_desejada == 1) {
+                $res = 'O valor em centímetro equivalente ao valor em metro de '.$valor.' é : ' . $resultado;
+            } else if ($unidade_atual == 3 && $unidade_desejada == 1) { // Centímetro para Quilômetro
                 $resultado = $novo_valor / 100000;
-                $res = 'O Centímetro foi convetido para quilômetro e o valor é: ' . $resultado;
-            } else if ($unidade_atual == 3 && $unidade_desejada == 2){
+                $res = 'O valor em quilômetro equivalente ao valor em centímetro de '.$valor.' é : ' . $resultado;
+            } else if ($unidade_atual == 3 && $unidade_desejada == 2){ // Centímetro para Metro
                 $resultado = $novo_valor / 100;
-                $res = 'O Centímetro foi convetido para metro e o valor é: ' . $resultado;
+                $res = 'O valor em metro equivalente ao valor em centímetro de '.$valor.' é : ' . $resultado;
+            } else {
+                $res = 'Você está tentando converter para a mesma unidade.';
             }
         break;
         
         case 2:
             $novo_valor = $valor;
-            if ($unidade_desejada == 1){
+            if ($unidade_desejada == 1){ // Grama para Quilograma
                 $resultado = $novo_valor / 1000;
-                $res = 'A Grama foi convertida para Quilograma e o valor é: ' .$resultado;
-            } else {
+                $res = 'O valor em quilograma equivalente ao valor em grama de '.$valor.' é : ' . $resultado;
+            } else if ($unidade_desejada == 2) { // Quilograma para Grama
                 $resultado = $novo_valor * 1000;
-                $res = 'O Quilograma foi convertido para Grama e o valor é: ' .$resultado;
+                $res = 'O valor em grama equivalente ao valor em quilômetro de '.$valor.' é : ' . $resultado;
+            } else {
+                $res = 'Você está tentando converter para a mesma unidade.';
             }
         break;
         
         case 3:
             $novo_valor = $valor;
-            if ($unidade_desejada == 1){
+            if ($unidade_desejada == 1){ // Fahrenheit para Celsius
                 $resultado = (($novo_valor - 32) / 1.8);
-                $res = 'O Fahrenheit foi convertido para Celsius e o valor é: ' .$resultado;
-            } else {
+                $res = 'O valor em Celsius equivalente ao valor em Fahrenheit de '.$valor.' é : ' . $resultado;
+            } else if ($unidade_desejada == 2){ // Celsius para Fahrenheit
                 $resultado = (($novo_valor * 1.8) + 32);
-                $res = 'O Celsius foi convertido para Fahrenheit e o valor é: ' .$resultado;
+                $res = 'O valor em Fahrenheit equivalente ao valor em Celsius de '.$valor.' é : ' . $resultado;
+            } else {
+                $res = 'Você está tentando converter para a mesma unidade.';
             }
         break;
         }

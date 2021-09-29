@@ -15,7 +15,7 @@
                 <option value='3'>Temperatura</option>
             </select>
             
-            <label for="medida">Unidade atual</label>
+            <label for="medida">Unidade a ser convertida</label>
             <select name='unidades' class="select"> </select>
             
             <div class="hidden unidades-1">
