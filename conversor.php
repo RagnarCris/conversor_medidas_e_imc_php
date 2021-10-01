@@ -31,10 +31,10 @@
         
         case 2:
             $novo_valor = $valor;
-            if ($unidade_desejada == 1){ // Grama para Quilograma
+            if ($unidade_atual == 2 && $unidade_desejada == 1){ // Grama para Quilograma
                 $resultado = $novo_valor / 1000;
                 $res = 'O valor em quilograma equivalente ao valor em grama de '.$valor.' é : ' . $resultado;
-            } else if ($unidade_desejada == 2) { // Quilograma para Grama
+            } else if ($unidade_atual == 1 && $unidade_desejada == 2) { // Quilograma para Grama
                 $resultado = $novo_valor * 1000;
                 $res = 'O valor em grama equivalente ao valor em quilômetro de '.$valor.' é : ' . $resultado;
             } else {
@@ -44,10 +44,10 @@
         
         case 3:
             $novo_valor = $valor;
-            if ($unidade_desejada == 1){ // Fahrenheit para Celsius
+            if ($unidade_atual == 2 && $unidade_desejada == 1){ // Fahrenheit para Celsius
                 $resultado = (($novo_valor - 32) / 1.8);
                 $res = 'O valor em Celsius equivalente ao valor em Fahrenheit de '.$valor.' é : ' . $resultado;
-            } else if ($unidade_desejada == 2){ // Celsius para Fahrenheit
+            } else if ($unidade_atual == 1 && $unidade_desejada == 2){ // Celsius para Fahrenheit
                 $resultado = (($novo_valor * 1.8) + 32);
                 $res = 'O valor em Fahrenheit equivalente ao valor em Celsius de '.$valor.' é : ' . $resultado;
             } else {
