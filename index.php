@@ -10,7 +10,7 @@
         <div class="escolha">
             <form name="escolha" method="post" action="choice.php" class="form">
                 <label for="aplicacao" style="margin-right: 10px;">Aplicação: </label>
-                <select name='aplicacao'class="selecao">
+                <select name='aplicacao' class="selecao">
                     <div style="margin-right: 10px;">
                         <option value='calculadora'>Calculadora de IMC</option>
                         <option value='conversor'>Conversor de medidas</option>
